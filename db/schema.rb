@@ -16,14 +16,14 @@ ActiveRecord::Schema.define(version: 20180204005204) do
     t.string "name"
     t.string "symbol"
     t.decimal "price"
-    t.integer "market_cap"
-    t.integer "volume_24h"
-    t.integer "circulating_supply"
+    t.bigint "market_cap"
+    t.bigint "volume_24h"
+    t.bigint "circulating_supply"
     t.decimal "change_24h"
     t.decimal "change_1h"
     t.integer "tweets_24h"
     t.decimal "tweets_sentiment"
-    t.decimal "reddit_posts_24h"
+    t.integer "reddit_posts_24h"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

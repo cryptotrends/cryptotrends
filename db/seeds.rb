@@ -14,6 +14,9 @@ Crypto.create!(symbol: "ETH", github_id: "77478378")
 Crypto.create!(symbol: "BCH", github_id: "89913655")
 Crypto.create!(symbol: "LTC", github_id: "29544163")
 
+c = CoinMarketCapDataJob.new
+c.perform
+
 r = RedditDataJob.new
 r.perform("Tronix", "TRX")
 r.perform("Iota", "MIOTA")

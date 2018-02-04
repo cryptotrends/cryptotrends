@@ -4,39 +4,47 @@
       <h1 class="mt-5">CryptoTrends Social Aggregator</h1>
     </div>
   </div>
-
   <div class="row">
     <div class="col-lg-12 text-center">
-      <table class="table table-hover">
+      <table class="table table-hover table-responsive">
         <thead>
           <tr>
             <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Price</th>
+            <th>Market Cap</th>
+            <th>Volume (24h)</th>
+            <th>Reddit Sentiment</th>
+            <th>Twitter Sentiment</th>
+            <th>Circulating Supply</th>
+            <th>Change (24h)</th>
+            <th>Change (1h)</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          <% @cryptos.each_with_index do |crypto, i| %>
+            <tr>
+              <th scope="row"><%= i + 1 %>                     </th>
+              <td> <%= add_commas(crypto.name.titleize) %>     </td>
+              <td> <%= add_commas(crypto.symbol) %>            </td>
+              <td>$<%= add_commas(crypto.price) %>             </td>
+              <td>$<%= add_commas(crypto.market_cap) %>        </td>
+              <td>$<%= add_commas(crypto.volume_24h) %>        </td>
+              <%= render partial: 'color_td', locals: {val: crypto.reddit_sentiment} %>
+              <%= render partial: 'color_td', locals: {val: crypto.tweets_sentiment} %>
+              <td>$<%= add_commas(crypto.circulating_supply) %></td>
+              <%= render partial: 'color_td', locals: {val: crypto.change_24h} %>
+              <%= render partial: 'color_td', locals: {val: crypto.change_1h} %>
+            </tr>
+          <% end %>
         </tbody>
       </table>
     </div>
   </div>
 </div>
+<footer class="text-center">
+  <span>
+      Made with <i class="fa fa-heart pulse"></i> in <a href="https://www.google.com/maps?q=san+francisco&um=1&ie=UTF-8&sa=X&ved=0ahUKEwiM87jrhYzZAhXojVQKHTc7D4kQ_AUICigB" target="_blank">San Francisco</a>
+  </span>
+</footer>

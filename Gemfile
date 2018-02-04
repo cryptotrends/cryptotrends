@@ -15,8 +15,9 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'figaro'
 gem 'twitter'
-gem 'google-cloud-language'
 gem "octokit", "~> 4.0"
+gem 'google-cloud-language'
+gem 'font-awesome-rails'
 
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'

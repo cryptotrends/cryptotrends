@@ -71,6 +71,8 @@ GEM
     ffi (1.9.18)
     figaro (1.1.1)
       thor (~> 0.14)
+    font-awesome-rails (4.7.0.2)
+      railties (>= 3.2, < 5.2)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     google-cloud-language (0.29.0)
@@ -262,6 +264,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   figaro
+  font-awesome-rails
   google-cloud-language
   jbuilder (~> 2.5)
   jquery-rails

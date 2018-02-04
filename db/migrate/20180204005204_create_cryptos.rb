@@ -15,6 +15,7 @@ class CreateCryptos < ActiveRecord::Migration[5.1]
       t.decimal :reddit_sentiment
       t.integer :reddit_posts_24h
       t.decimal :github_index
+
       t.timestamps
     end
   end

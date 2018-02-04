@@ -18,6 +18,9 @@ gem 'figaro'
 gem 'twitter'
 gem 'google-cloud-language'
 
+gem 'bootstrap', '~> 4.0.0'
+gem 'jquery-rails'
+gem 'popper_js', '~> 1.12.9'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -20,6 +20,9 @@
 /node_modules
 /yarn-error.log
 
-i.byebug_history
-/.idea/*
+.byebug_history
+
+# Ignore application configuration
 /config/application.yml
+/.idea/*
+config/CryptoTrends-25e361ce02ec.json

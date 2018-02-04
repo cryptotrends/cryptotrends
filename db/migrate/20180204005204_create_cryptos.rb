@@ -4,6 +4,7 @@ class CreateCryptos < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :symbol
       t.decimal :price
+      t.bigint :github_id
       t.bigint :market_cap
       t.bigint :volume_24h
       t.bigint :circulating_supply
@@ -12,7 +13,7 @@ class CreateCryptos < ActiveRecord::Migration[5.1]
       t.integer :tweets_24h
       t.decimal :tweets_sentiment
       t.integer :reddit_posts_24h
-
+      t.decimal :github_index
       t.timestamps
     end
   end

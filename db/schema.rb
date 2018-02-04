@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20180204005204) do
     t.string "name"
     t.string "symbol"
     t.decimal "price"
+    t.bigint "github_id"
     t.bigint "market_cap"
     t.bigint "volume_24h"
     t.bigint "circulating_supply"

@@ -30,8 +30,16 @@
               <td>$<%= add_commas(crypto.market_cap) %>        </td>
               <td>$<%= add_commas(crypto.volume_24h) %>        </td>
               <td>$<%= add_commas(crypto.circulating_supply) %></td>
-              <td> <%= add_commas(crypto.change_24h) %>%       </td>
-              <td> <%= add_commas(crypto.change_1h) %>%        </td>
+              <% if crypto.change_24h >= 0 %>
+                <td class='text-success'> <%= add_commas(crypto.change_24h) %>% </td>
+              <% else %>
+                <td class='text-danger'> <%= add_commas(crypto.change_24h) %>%  </td>
+              <% end %>
+              <% if crypto.change_1h >= 0 %>
+                <td class='text-success'> <%= add_commas(crypto.change_1h) %>% </td>
+              <% else %>
+                <td class='text-danger'> <%= add_commas(crypto.change_1h) %>%  </td>
+              <% end %>
             </tr>
           <% end %>
         </tbody>

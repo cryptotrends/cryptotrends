@@ -24,3 +24,5 @@
 
 # Ignore application configuration
 /config/application.yml
+/.idea/*
+config/CryptoTrends-25e361ce02ec.json

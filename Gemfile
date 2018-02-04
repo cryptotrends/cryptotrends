@@ -16,6 +16,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'figaro'
 gem 'twitter'
+gem 'google-cloud-language'
 
 
 group :development, :test do

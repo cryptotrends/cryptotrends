@@ -11,6 +11,7 @@ class CoinMarketCapDataJob < ApplicationJob
       c = Crypto.find_by(symbol: coin["symbol"])
       unless c.present?
         Crypto.create!(
+          rank: coin["rank"],
           name: coin["name"].downcase,
           symbol: coin["symbol"],
           price: coin["price_usd"],
@@ -22,6 +23,7 @@ class CoinMarketCapDataJob < ApplicationJob
         )
       else
         c.update_attributes(
+          rank: coin["rank"],
           name: coin["name"].downcase,
           symbol: coin["symbol"],
           price: coin["price_usd"],

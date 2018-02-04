@@ -1,4 +1,6 @@
 class Crypto < ApplicationRecord
+  scope :ranked, -> { order(rank: :asc) }
+  
   def calculate_total_index
     i = 0
     x = 0

@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @cryptos = Crypto.all
+    @cryptos = Crypto.all.ranked
   end
 
   def show

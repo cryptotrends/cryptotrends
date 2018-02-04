@@ -17,6 +17,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'figaro'
 gem 'twitter'
 gem 'google-cloud-language'
+gem 'font-awesome-rails'
 
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'

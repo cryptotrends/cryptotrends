@@ -1,4 +1,5 @@
 module Sentiment
+  extend self
 
   def get_sentiment(text)
     language = Google::Cloud::Language.new

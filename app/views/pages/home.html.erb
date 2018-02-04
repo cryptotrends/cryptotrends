@@ -16,6 +16,7 @@
             <th>Market Cap</th>
             <th>Volume (24h)</th>
             <th>Reddit Sentiment</th>
+            <th>Twitter Sentiment</th>
             <th>Circulating Supply</th>
             <th>Change (24h)</th>
             <th>Change (1h)</th>
@@ -31,6 +32,7 @@
               <td>$<%= add_commas(crypto.market_cap) %>        </td>
               <td>$<%= add_commas(crypto.volume_24h) %>        </td>
               <%= render partial: 'color_td', locals: {val: crypto.reddit_sentiment} %>
+              <%= render partial: 'color_td', locals: {val: crypto.tweets_sentiment} %>
               <td>$<%= add_commas(crypto.circulating_supply) %></td>
               <%= render partial: 'color_td', locals: {val: crypto.change_24h} %>
               <%= render partial: 'color_td', locals: {val: crypto.change_1h} %>

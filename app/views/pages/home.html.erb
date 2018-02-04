@@ -42,4 +42,46 @@
       </table>
     </div>
   </div>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+        How does this work?
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">About CryptoTrendz</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p> Cryptotrends is a social sentiment aggregator which scrapes data from twitter,
+        reddit, and github from the past 24hrs and then grades the data with an index
+        </p>
+
+        <p>The grade ranges from -1 to 1 where 1 is positive news/sentiment, and -1 is negative</p>
+
+        <p>For Reddit, we scrape all post titles from the select crypto subreddit and analyze them using google's
+        linguistic sentiment analysis API</p>
+
+        <p>For Twitter, we scrape all tweets about the topic using key words and analyze them using google's
+        text analysis API</p>
+
+        <p>For Github, we scrape the latest commits and analyze how much was actually changed in code 
+        base using Stanfords' plagarism API and thus assigning a grade based on if code was actually added, or if it was moved around.
+        Example <a href="https://github.com/tronprotocol/java-tron/commit/b13cd64b1fa33cc301c1be2c0cd58007fadaccd5" target="_blank">here</a> would be graded as -1</p>
+
+      </div>
+      <%#<div class="modal-footer">%>
+        <%#<button type="button" class="btn btn-secondary" data-dismiss="modal">Creatore</button>%>
+      <%#</div>%>
+    </div>
+  </div>
 </div>

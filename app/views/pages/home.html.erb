@@ -17,6 +17,8 @@
             <th>Volume (24h)</th>
             <th>Reddit Sentiment</th>
             <th>Twitter Sentiment</th>
+            <th>Github Index</th>
+            <th>Total Index</th>
             <th>Circulating Supply</th>
             <th>Change (24h)</th>
             <th>Change (1h)</th>
@@ -31,11 +33,13 @@
               <td>$<%= add_commas(crypto.price) %>             </td>
               <td>$<%= add_commas(crypto.market_cap) %>        </td>
               <td>$<%= add_commas(crypto.volume_24h) %>        </td>
-              <%= render partial: 'color_td', locals: {val: crypto.reddit_sentiment} %>
-              <%= render partial: 'color_td', locals: {val: crypto.tweets_sentiment} %>
+              <%= render partial: 'color_td', locals: {val: crypto.reddit_sentiment, percent: false} %>
+              <%= render partial: 'color_td', locals: {val: crypto.tweets_sentiment, percent: false} %>
+              <%= render partial: 'color_td', locals: {val: crypto.github_index, percent: false} %>
+              <%= render partial: 'color_td', locals: {val: crypto.total_index, percent: false} %>
               <td>$<%= add_commas(crypto.circulating_supply) %></td>
-              <%= render partial: 'color_td', locals: {val: crypto.change_24h} %>
-              <%= render partial: 'color_td', locals: {val: crypto.change_1h} %>
+              <%= render partial: 'color_td', locals: {val: crypto.change_24h, percent: true} %>
+              <%= render partial: 'color_td', locals: {val: crypto.change_1h, percent: true} %>
             </tr>
           <% end %>
         </tbody>

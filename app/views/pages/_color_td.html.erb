@@ -1,0 +1,7 @@
+<% if val.present? && val >= 0 %>
+  <td class='text-success'> <%= add_commas(val) %>% </td>
+<% elsif val.present? && val < 0 %>
+  <td class='text-danger'> <%= add_commas(val) %>% </td>
+<% else %>
+  <td></td>
+<% end %>

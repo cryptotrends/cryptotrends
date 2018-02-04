@@ -15,6 +15,7 @@
             <th>Price</th>
             <th>Market Cap</th>
             <th>Volume (24h)</th>
+            <th>Reddit Sentiment</th>
             <th>Circulating Supply</th>
             <th>Change (24h)</th>
             <th>Change (1h)</th>
@@ -24,22 +25,15 @@
           <% @cryptos.each_with_index do |crypto, i| %>
             <tr>
               <th scope="row"><%= i + 1 %>                     </th>
-              <td> <%= add_commas(crypto.name) %>              </td>
+              <td> <%= add_commas(crypto.name.titleize) %>     </td>
               <td> <%= add_commas(crypto.symbol) %>            </td>
               <td>$<%= add_commas(crypto.price) %>             </td>
               <td>$<%= add_commas(crypto.market_cap) %>        </td>
               <td>$<%= add_commas(crypto.volume_24h) %>        </td>
+              <%= render partial: 'color_td', locals: {val: crypto.reddit_sentiment} %>
               <td>$<%= add_commas(crypto.circulating_supply) %></td>
-              <% if crypto.change_24h >= 0 %>
-                <td class='text-success'> <%= add_commas(crypto.change_24h) %>% </td>
-              <% else %>
-                <td class='text-danger'> <%= add_commas(crypto.change_24h) %>%  </td>
-              <% end %>
-              <% if crypto.change_1h >= 0 %>
-                <td class='text-success'> <%= add_commas(crypto.change_1h) %>% </td>
-              <% else %>
-                <td class='text-danger'> <%= add_commas(crypto.change_1h) %>%  </td>
-              <% end %>
+              <%= render partial: 'color_td', locals: {val: crypto.change_24h} %>
+              <%= render partial: 'color_td', locals: {val: crypto.change_1h} %>
             </tr>
           <% end %>
         </tbody>

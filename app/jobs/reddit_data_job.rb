@@ -5,7 +5,7 @@ class RedditDataJob < ApplicationJob
   queue_as :default
 
   def perform(subreddit)
-    uri = URI('https://api.reddit.com/r/' + subreddit + '/new?limit=20')
+    uri = URI('https://api.reddit.com/r/' + subreddit.strip.downcase + '/new?limit=20')
     n = Net::HTTP.get(uri)
     if n.length >= 46 ## Sometimes we get rate limit error 
       posts_array = JSON.parse(n)["data"]["children"]

@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20180204005204) do
     t.decimal "tweets_sentiment"
     t.decimal "reddit_sentiment"
     t.integer "reddit_posts_24h"
+    t.string "subreddit_url"
     t.decimal "github_index"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -14,9 +14,11 @@ Crypto.create!(symbol: "ETH", github_id: "77478378", github_url: "https://github
 Crypto.create!(symbol: "BCH", github_id: "89913655", github_url: "https://github.com/Bitcoin-ABC/bitcoin-abc")
 Crypto.create!(symbol: "LTC", github_id: "29544163", github_url: "https://github.com/litecoin-project/litecoin")
 
+puts 'getting coinmarketcap data'
 c = CoinMarketCapDataJob.new
 c.perform
 
+puts 'getting reddit data'
 r = RedditDataJob.new
 r.perform("Tronix", "TRX")
 r.perform("Iota", "MIOTA")

@@ -56,8 +56,8 @@
   <div class="row">
     <div class="offset-md-3 col-sm-12 col-md-6 text-center">
       <a href="https://twitter.com/search?q=<%= @crypto.name %>" class="btn btn-primary btn-md active soc-button" style="background-color: #3ac7ff; border-color: #3ac7ff" role="button" aria-pressed="true"><%= @crypto.name.titleize %> on Twitter!</a>
-      <a href="" class="btn btn-primary btn-md active soc-button" style="background-color: black; border-color: black;" role="button" aria-pressed="true"><%= @crypto.name.titleize %> on Github!</a>
-      <a href="" class="btn btn-primary btn-md active soc-button" style="background-color: #ff5500; border-color: #ff5500;" role="button" aria-pressed="true"><%= @crypto.name.titleize %> on Reddit!</a>
+      <a href="<%= @crypto.github_url %>" class="btn btn-primary btn-md active soc-button" style="background-color: black; border-color: black;" role="button" aria-pressed="true"><%= @crypto.name.titleize %> on Github!</a>
+      <a href="http://reddit.com/r/<%= @crypto.name %>" class="btn btn-primary btn-md active soc-button" style="background-color: #ff5500; border-color: #ff5500;" role="button" aria-pressed="true"><%= @crypto.name.titleize %> on Reddit!</a>
     </div>
   </div>
 </div>

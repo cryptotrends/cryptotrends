@@ -1,0 +1,64 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col s12 text-center">
+      <h1 style="margin: 40px 0;"><%= @crypto.name.titleize %></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-sm-3 col-sm-12 col-md-6 table-responsive">
+      <table class="table table-hover">
+        <tbody>
+          <tr>
+            <th>Name</th>
+            <td> <%= @crypto.name.titleize %></td>
+          </tr>
+          <tr>
+            <th>Symbol</th>
+            <td> <%= @crypto.symbol %></td>
+          </tr>
+          <tr>
+            <th>Price</th>
+            <td>$<%= add_commas(@crypto.price) %></td>
+          </tr>
+          <tr>
+            <th>Market Cap</th>
+            <td>$<%= add_commas(@crypto.market_cap) %></td>
+          </tr>
+          <tr>
+            <th>Volume (24h)</th>
+            <td>$<%= add_commas(@crypto.volume_24h) %></td>
+          </tr>
+          <tr>
+            <th>Reddit Sentiment</th>
+            <%= render partial: 'color_td', locals: {val: @crypto.reddit_sentiment} %>
+          </tr>
+          <tr>
+            <th>Twitter Sentiment</th>
+            <%= render partial: 'color_td', locals: {val: @crypto.tweets_sentiment} %>
+          </tr>
+          <tr>
+            <th>Circulating Supply</th>
+            <td>$<%= add_commas(@crypto.circulating_supply) %></td>
+          </tr>
+          <tr>
+            <th>Change (24h)</th>
+            <%= render partial: 'color_td', locals: {val: @crypto.change_24h} %>
+          </tr>
+          <tr>
+            <th>Change (1h)</th>
+            <%= render partial: 'color_td', locals: {val: @crypto.change_1h} %>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-md-3 col-sm-12 col-md-6 text-center">
+      <a href="https://twitter.com/search?q=<%= @crypto.name %>" class="btn btn-primary btn-md active soc-button" style="background-color: #3ac7ff; border-color: #3ac7ff" role="button" aria-pressed="true"><%= @crypto.name.titleize %> on Twitter!</a>
+      <a href="" class="btn btn-primary btn-md active soc-button" style="background-color: black; border-color: black;" role="button" aria-pressed="true"><%= @crypto.name.titleize %> on Github!</a>
+      <a href="" class="btn btn-primary btn-md active soc-button" style="background-color: #ff5500; border-color: #ff5500;" role="button" aria-pressed="true"><%= @crypto.name.titleize %> on Reddit!</a>
+    </div>
+  </div>
+</div>
+

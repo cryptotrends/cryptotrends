@@ -20,7 +20,7 @@ class Crypto < ApplicationRecord
 
   def self.set_total_index
     Crypto.all.each do |crypto|
-      crypto.update_attributes(:total_index, crypto.total_index)
+      crypto.update_attributes(:total_index, crypto.calculate_total_index)
     end
   end
 end

@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20180204005204) do
     t.string "name"
     t.string "symbol"
     t.decimal "price"
+    t.bigint "github_id"
     t.bigint "market_cap"
     t.bigint "volume_24h"
     t.bigint "circulating_supply"
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 20180204005204) do
     t.decimal "tweets_sentiment"
     t.decimal "reddit_sentiment"
     t.integer "reddit_posts_24h"
+    t.decimal "github_index"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

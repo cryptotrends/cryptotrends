@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20180204005204) do
     t.integer "reddit_posts_24h"
     t.string "github_url"
     t.decimal "github_index"
+    t.decimal "total_index"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

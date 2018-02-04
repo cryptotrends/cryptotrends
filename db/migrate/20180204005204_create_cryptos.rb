@@ -1,0 +1,18 @@
+class CreateCryptos < ActiveRecord::Migration[5.1]
+  def change
+    create_table :cryptos do |t|
+      t.string :name
+      t.string :symbol
+      t.decimal :price
+      t.integer :market_cap
+      t.integer :volume_24h
+      t.integer :circulating_supply
+      t.decimal :change_24h
+      t.decimal :change_1h
+      t.decimal :tweets_24h
+      t.decimal :reddit_posts_24h
+
+      t.timestamps
+    end
+  end
+end

@@ -1,8 +1,16 @@
 @import "bootstrap"; // From vendor 
 @import "font-awesome";
 
+tr {
+  cursor: pointer
+}
+
+.soc-button {
+  margin: 6px 0;
+}
+
 footer {
-  margin-bottom: 40px;
+  margin: 40px 0;
   span {
     color: #666;
     font-size: 18px;
